@@ -1,9 +1,12 @@
 # README
+Project is a template for building a new repo. It contains several folders. You can find their meaning in the following paragraphs.
+
 ## Folder structure
-- dataset: 
-- pipeline: 
-- model: 
-## config writting
+- dataset: contains data used in this project. You should also contain a config.json for dataset in this folder. 
+- pipeline: contaians all the code used in this project. In general, people build up a project to implement a function or do some experiments like some researchers do. There must be a workflow for both two types of goals. You can define your workflow in pipeline.
+- model: contains models you need to call when running the code in pipeline. Functions by other coders can be contained in this folder.
+
+## Config writting
 ### config.json
 ```json
 {
@@ -68,3 +71,12 @@
     ]
 }
 ```
+### eval_config.json
+```json
+{
+    "para": "value",
+}
+```
+
+## Project management
+Project management is a tough work for almost everyone. I summaried my experiments in my [blog](). It will be great if it can help you ❤️
