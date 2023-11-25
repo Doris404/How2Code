@@ -77,4 +77,16 @@ class Players():
         print('play_list: ')
         for i in range(self.player_num):
             self.player_list[i].show()
-        
+class Deal():
+    def __init__(self, price, player):
+        self.price = price
+        self.player = player
+    def show(self):
+        print(self.player.idx, self.player.name, self.player.role, self.price)
+class Deals():
+    def __init__(self, turn):
+        self.turn = turn
+        self.deal_list = []
+    def show(self):
+        for i in range(len(self.deal_list)):
+            self.deal_list[i].show()    

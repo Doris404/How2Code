@@ -1,5 +1,5 @@
 """ pipeline.py """
-from player import Player, Players
+from player import Player, Players, Deal, Deals
 from card import Cards
 import os
 import json
@@ -31,10 +31,15 @@ if __name__ == "__main__":
     players.deliver(cards.player_cards)
     
     # deal
+    price_list = []
+    blind_deal = Deals('blind')
     for player in players.player_list:
         price = player.bet()
-        # print(price)
-    players.show()    
+        deal = Deal(player=player, price=price)
+        blind_deal.deal_list.append(deal)
+
+    # players.show()
+    blind_deal.show()   
     """ Second Deal:  """
     # cards
     flop_cards = cards.flop_cards

@@ -59,5 +59,12 @@ Config file should contain information as follow:
 - player_num: number of players (ps: 6 is suggested)
 - my_role: role you want to play
 
+You need to at most bet 4 times. You need to input your bet when seeing:
+```bash
+Please bet:
+```
+You should enter an Integer!
+
+
 # Reference
 - Instruction on wikipedia: https://en.wikipedia.org/wiki/Texas_hold_%27em 
