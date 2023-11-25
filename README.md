@@ -51,5 +51,13 @@ The strategy is hard to summary. Basically, some experts can decide their price 
 
 Possiblity of each hand to win the game has been summrized by several, and you can find the result in the internet.
 
+# How to play Texas Holdem with this project
+Enter the path [TexasHoldem](TexasHoldem) and run `python pipeline.py --config_file [your config file]` and you can play the game with the given config file. 
+
+Config file should contain information as follow:
+- full_cards: a list that contain all the card you want to play with
+- player_num: number of players (ps: 6 is suggested)
+- my_role: role you want to play
+
 # Reference
 - Instruction on wikipedia: https://en.wikipedia.org/wiki/Texas_hold_%27em 
