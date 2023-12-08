@@ -75,6 +75,7 @@ if eval_flag == True:
     js_str = json.dumps(eval_config, indent=4)
     js_file = open(eval_path, 'w')
     js_file.write(js_str)
+    js_file.close()
     print('Evaluate success!')
     pass
 if tune_flag == True:
