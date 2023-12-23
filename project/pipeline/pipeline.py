@@ -45,6 +45,15 @@ tune_flag = args.tune_flag
 model_params_path = args.model_params_path
 gpu = args.gpu
 
+class NpEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, np.integer):
+            return int(obj)
+        if isinstance(obj, np.floating):
+            return float(obj)
+        if isinstance(obj, np.ndarray):
+            return obj.tolist()
+        return json.JSONEncoder.default(self, obj)
 
 """ Main Pipeline """
 if train_flag == True:
@@ -72,7 +81,7 @@ if eval_flag == True:
     eval = Evaluator(eval_config)
     evaluate_result = eval.evaluate()
     eval_config['result'] = evaluate_result
-    js_str = json.dumps(eval_config, indent=4)
+    js_str = json.dumps(eval_config, indent=4, ensure_ascii=False, cls=NpEncoder)
     js_file = open(eval_path, 'w')
     js_file.write(js_str)
     js_file.close()
