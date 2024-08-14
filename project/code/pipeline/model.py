@@ -1,0 +1,1 @@
+""" model.py: apply the model uniformly """
