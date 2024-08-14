@@ -1,6 +1,6 @@
 # How2Code
 
-<div><center><img src=project/assets/img/logo.png width=200></center></div>
+<div align=center><img src=project/assets/img/logo.png width=200></div> 
 
 How2Code is a project for teaching other coder how to code with Github ❤️
 
