@@ -1,0 +1,20 @@
+{
+    "eval_config_path": "eval_config.json",
+    "eval_path": "./",
+    "model_list": [],
+    "ctgan": [],
+    "tvae": [],
+    "tddpm": [],
+    "made": [],
+    "realtabformer": [],
+    "result_save": [
+    ],
+    "analyze_save": [],
+    "data_list": [
+    ],
+    "result_json_list": [
+        "20240813-095048.json",
+        "20240813-135225.json",
+        "20240813-175457.json"
+    ]
+}
