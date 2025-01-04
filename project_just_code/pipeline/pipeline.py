@@ -8,6 +8,16 @@ from datetime import timezone, timedelta
 
 from eval import Evaluator as Evaluator
 
+class NpEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, np.integer):
+            return int(obj)
+        if isinstance(obj, np.floating):
+            return float(obj)
+        if isinstance(obj, np.ndarray):
+            return obj.tolist()
+        return json.JSONEncoder.default(self, obj)
+
 """ Config """
 timestamp = datetime.datetime.now().astimezone(timezone(timedelta(hours=8))).strftime("%Y%m%d")
 id_ = datetime.datetime.now().astimezone(timezone(timedelta(hours=8))).strftime("%Y%m%d-%H%M%S")
@@ -45,15 +55,7 @@ tune_flag = args.tune_flag
 model_params_path = args.model_params_path
 gpu = args.gpu
 
-class NpEncoder(json.JSONEncoder):
-    def default(self, obj):
-        if isinstance(obj, np.integer):
-            return int(obj)
-        if isinstance(obj, np.floating):
-            return float(obj)
-        if isinstance(obj, np.ndarray):
-            return obj.tolist()
-        return json.JSONEncoder.default(self, obj)
+
 
 """ Main Pipeline """
 if train_flag == True:
