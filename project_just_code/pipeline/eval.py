@@ -1,6 +1,7 @@
 """ eval.py: evaluate the result """
 import json
 import numpy as np
+import argparse
 
 class NpEncoder(json.JSONEncoder):
     def default(self, obj):
@@ -28,3 +29,22 @@ class Evaluator(object):
         js_file.write(js_str)
         js_file.close()
         return
+    
+if __name__=="__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--data_name", type=str, default='data')
+    parser.add_argument("--model_name", type=str, default='model_name')
+    parser.add_argument("--model_config", type=str, default='config.json')
+    parser.add_argument("--times", type=int, default=5)
+    parser.add_argument("--gpu", type=int, default=0)
+    parser.add_argument("--output_path", type=str, default='../exe/eval.json')
+    args = parser.parse_args()
+    data_name = args.data_name
+    model_name = args.model_name
+    model_config = args.model_config
+    times = args.times
+    gpu = args.gpu
+    output_path = args.output_path
+        
+    evaluator = Evaluator(data_name=data_name, model_name=model_name, model_config=model_config, times=times, save_path=output_path)
+    evaluator.evaluate()
