@@ -1,0 +1,10 @@
+data,model,eval1,eval2
+data1,model1, 9.2, 2
+data1,model2, 10.0, 1
+data1,model3, 4.2, 2
+data2,model1, 9.1, 2
+data2,model2, 10.4, 1
+data2,model3, 4.7, 2
+data3,model1, 9.9, 2
+data3,model2, 10.0, 1
+data3,model3, 4.2, 2
