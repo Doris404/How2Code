@@ -13,7 +13,7 @@ from tune import Tuner as Tuner
 from eval import Evaluator as Evaluator
 
 
-data_path = '../dataset'
+data_path = '../data'
 model_path = '../model'
 global_path = '..'
 result_path = '../exe'
