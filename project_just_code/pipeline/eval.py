@@ -24,6 +24,9 @@ class Evaluator(object):
         result = {
             "key": "value"
         }
+        result['data_name'] = data_name
+        result['model_name'] = model_name
+        result['model_config'] = model_config
         js_str = json.dumps(result, indent=4, ensure_ascii=False, cls=NpEncoder)
         js_file = open(self.save_path, 'w')
         js_file.write(js_str)

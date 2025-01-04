@@ -1,0 +1,14 @@
+{
+    "eval_config_path": "eval_config.json",
+    "eval_path": ".",
+    "model_list": [],
+    "result_json_list": [
+        "eval_20250104-145818_data_model_config.json",
+        "eval_20250104-145836_data_model_config.json"
+    ],
+    "result_save": [
+        "./20250104-150316_result.csv"
+    ],
+    "analyze_save": [],
+    "data_list": []
+}

@@ -1,15 +1,15 @@
 {
-    "config_type": "dataset",
-    "config_path": "./dataset",
+    "config_type": "data",
+    "config_path": "./data",
     "data_list": [
         {
-            "name": "data_name",
+            "name": "data1",
             "train_row_num": 300,
             "train_col_num": 2,
             "test_row_num": 100,
             "test_col_num": 2,
-            "train_file": "./dataset/data_name/train",
-            "test_file": "./dataset/data_name/test",
+            "train_file": "./dataset/data1/train",
+            "test_file": "./dataset/data1/test",
             "columns": [
                 {
                     "column_name": "col0",
